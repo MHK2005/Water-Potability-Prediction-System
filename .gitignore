@@ -1,17 +1,12 @@
-# Python
 __pycache__/
 *.py[cod]
 .venv/
 venv/
 env/
-
-# Jupyter
 .ipynb_checkpoints/
-
-# OS / editors
 .DS_Store
 Thumbs.db
 .vscode/
-
-# Streamlit secrets
+*.pptx
+*.docx
 .streamlit/secrets.toml
