@@ -39,13 +39,6 @@ if not MODEL_PATH.exists():
 model = load_model()
 reference = load_reference_data()
 
-with st.sidebar:
-    st.header("About")
-    st.write(
-        "This application uses a neural-network regression model and a 0.5 "
-        "decision threshold to classify water samples as potable or not potable."
-    )
-
 st.subheader("Water quality parameters")
 st.caption("Default values are dataset medians and can be edited.")
 

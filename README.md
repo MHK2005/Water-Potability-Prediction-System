@@ -1,59 +1,140 @@
 # 💧 Water Potability Prediction System
 
-A machine-learning web application that predicts water potability from nine measured water-quality parameters.
+A machine learning project that predicts whether a water sample is **potable (safe to drink)** or **not potable** based on its physicochemical properties.
 
-## Features
+## 🚀 Live Demo
 
-- Nine water-quality inputs
-- Missing-value imputation learned from training data
-- StandardScaler preprocessing
-- Neural-network model
-- Potable / Not Potable prediction
+### [💧 Try the Water Potability Prediction System](https://water-potability-predict.streamlit.app/)
 
-## Input Features
+---
 
-- `ph`
-- `Hardness`
-- `Solids`
-- `Chloramines`
-- `Sulfate`
-- `Conductivity`
-- `Organic_carbon`
-- `Trihalomethanes`
-- `Turbidity`
+## 📌 Project Overview
 
-## Project Structure
+Water quality depends on several physical and chemical characteristics. This project uses machine learning to analyze nine water-quality parameters and predict the potability of a given sample.
+
+---
+
+## 🧪 Input Parameters
+
+The model uses the following nine water-quality characteristics:
+
+| Parameter | Description |
+|---|---|
+| `ph` | pH value of the water |
+| `Hardness` | Water hardness |
+| `Solids` | Total dissolved solids |
+| `Chloramines` | Amount of chloramines |
+| `Sulfate` | Sulfate concentration |
+| `Conductivity` | Electrical conductivity |
+| `Organic_carbon` | Organic carbon content |
+| `Trihalomethanes` | Trihalomethane concentration |
+| `Turbidity` | Turbidity level |
+
+### Target Variable
+
+- `0` — Not Potable
+- `1` — Potable
+
+---
+
+## 🧠 Machine Learning Pipeline
+
+The application processes data through the following pipeline:
 
 ```text
-Water-Potability-Prediction/
+Water Quality Parameters
+          ↓
+   Mean Imputation
+          ↓
+   StandardScaler
+          ↓
+     MLPRegressor
+      64 → 32
+          ↓
+   Prediction Score
+          ↓
+    0.5 Threshold
+          ↓
+Potable / Not Potable
+```
+
+### Model Configuration
+
+- **Algorithm:** Multi-Layer Perceptron (`MLPRegressor`)
+- **Hidden Layers:** 64 and 32 neurons
+- **Activation Function:** ReLU
+- **Classification Threshold:** 0.5
+- **Preprocessing:** Mean Imputation + Standard Scaling
+
+---
+
+## 📁 Project Structure
+
+```text
+Water-Potability-Prediction-System/
+│
 ├── app.py
 ├── requirements.txt
 ├── README.md
+├── .gitignore
+│
 ├── data/
 │   └── water_potability.csv
+│
 ├── models/
 │   └── water_potability_pipeline.joblib
+│
 ├── notebooks/
 │   └── Water_Potability.ipynb
+│
 └── src/
     └── train_model.py
 ```
 
-## Run Locally
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Joblib
+- Streamlit
+- Jupyter Notebook
+- Git & GitHub
+
+---
+
+## 💻 Run Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/MHK2005/Water-Potability-Prediction-System.git
+cd Water-Potability-Prediction-System
+```
+
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
+### 3. Train the Model
+
+The trained model is already included in the repository. To retrain it:
+
+```bash
 python src/train_model.py
+```
+
+### 4. Start the Application
+
+```bash
 streamlit run app.py
 ```
 
-## Model
+Streamlit will provide a local URL that can be opened in a web browser.
 
-- `MLPRegressor`
-- Hidden layers: 64 and 32 neurons
-- ReLU activation
-- Classification threshold: 0.5
-
-## Disclaimer
-
-This project is for educational and machine-learning demonstration purposes. Its predictions are not a substitute for certified laboratory water testing.
+---
