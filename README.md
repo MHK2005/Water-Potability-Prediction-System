@@ -1,20 +1,20 @@
-# 💧 Water Potability Prediction System
+# Water Potability Prediction System
 
 A machine learning project that predicts whether a water sample is **potable (safe to drink)** or **not potable** based on its physicochemical properties.
 
-## 🚀 Live Demo
+## Live Demo
 
-### [💧 Try the Water Potability Prediction System](https://water-potability-predict.streamlit.app/)
+### [Link](https://water-potability-predict.streamlit.app/)
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Water quality depends on several physical and chemical characteristics. This project uses machine learning to analyze nine water-quality parameters and predict the potability of a given sample.
 
 ---
 
-## 🧪 Input Parameters
+## Input Parameters
 
 The model uses the following nine water-quality characteristics:
 
@@ -37,7 +37,7 @@ The model uses the following nine water-quality characteristics:
 
 ---
 
-## 🧠 Machine Learning Pipeline
+## Machine Learning Pipeline
 
 The application processes data through the following pipeline:
 
@@ -68,7 +68,7 @@ Potable / Not Potable
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Water-Potability-Prediction-System/
@@ -93,7 +93,7 @@ Water-Potability-Prediction-System/
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - Pandas
@@ -106,7 +106,7 @@ Water-Potability-Prediction-System/
 
 ---
 
-## 💻 Run Locally
+## Run Locally
 
 ### 1. Clone the Repository
 
